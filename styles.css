@@ -354,3 +354,11 @@ footer {
         height: 220px;
     }
 }
+*---Logo---*
+.valdia-logo {
+    width: 180px;
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
