@@ -35,6 +35,27 @@ header p {
     text-transform: uppercase;
     color: #9b7d76;
 }
+/* ---------- HEADER ---------- */
+
+header {
+    text-align: center;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    height: 105px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.valdia-logo {
+    width: 145px;
+    height: 90px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
 
 /* ---------- MAIN ---------- */
 
@@ -353,11 +374,4 @@ footer {
     .product-card img {
         height: 220px;
     }
-}
-*---Logo---*
-.valdia-logo {
-    width: 110px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
+
