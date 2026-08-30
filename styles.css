@@ -90,7 +90,7 @@ main {
     background-color: #9d776d;
 }
 
-/* ---------- WELLNESS / BEAUTY ---------- */
+/* ---------- SECCIONES GENERALES ---------- */
 
 section {
     margin-bottom: 70px;
@@ -115,12 +115,144 @@ section p {
     color: #625955;
 }
 
-/* ---------- PRODUCT SECTIONS ---------- */
+/* ---------- SECCIONES BLANCAS ---------- */
 
-main section:not(.hero) {
+main section:not(.hero):not(.products-section) {
     background-color: #ffffff;
     padding: 38px;
     border-radius: 18px;
+}
+
+/* ---------- PRODUCTOS ---------- */
+
+.products-section {
+    background: transparent;
+    padding: 20px 0 70px;
+}
+
+.products-section > .small-text {
+    text-align: center;
+}
+
+.products-section > h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* ---------- CARRUSEL HORIZONTAL ---------- */
+
+.products-grid {
+    display: flex;
+    gap: 24px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    padding: 10px 5px 30px;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.products-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* ---------- TARJETAS DE PRODUCTOS ---------- */
+
+.product-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 25px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(60, 45, 40, 0.08);
+}
+
+/* ---------- IMÁGENES DE PRODUCTOS ---------- */
+
+.product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+/* ---------- NOMBRE DEL PRODUCTO ---------- */
+
+.product-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* ---------- DESCRIPCIÓN ---------- */
+
+.product-card > p:not(.price) {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #6b615d;
+    margin-bottom: 18px;
+}
+
+/* ---------- PRECIO ---------- */
+
+.product-card .price {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 600;
+    color: #302a28;
+
+    margin-top: auto;
+    margin-bottom: 16px;
+}
+
+/* ---------- BOTÓN COMPRAR ---------- */
+
+.buy-button {
+    display: inline-block;
+
+    background-color: #b88f83;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    padding: 11px 24px;
+    border-radius: 30px;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #9d776d;
 }
 
 /* ---------- ABOUT ---------- */
@@ -158,9 +290,22 @@ footer {
     margin-top: 40px;
 }
 
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    .product-card {
+        flex: 0 0 280px;
+    }
+}
+
 /* ---------- MOBILE ---------- */
 
 @media (max-width: 700px) {
+
+    main {
+        width: 92%;
+    }
 
     header h1 {
         font-size: 34px;
@@ -178,11 +323,34 @@ footer {
         font-size: 16px;
     }
 
-    main section:not(.hero) {
+    main section:not(.hero):not(.products-section) {
         padding: 28px 22px;
     }
 
     section h2 {
         font-size: 29px;
+    }
+
+    .products-section {
+        padding-bottom: 50px;
+    }
+
+    .products-section > h2 {
+        font-size: 32px;
+    }
+
+    .products-grid {
+        gap: 16px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .product-card {
+        flex: 0 0 82%;
+        padding: 22px;
+    }
+
+    .product-card img {
+        height: 220px;
     }
 }
