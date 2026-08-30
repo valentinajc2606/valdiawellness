@@ -13,49 +13,33 @@ body {
     line-height: 1.6;
 }
 
+
 /* ---------- HEADER ---------- */
 
 header {
     text-align: center;
-    padding: 32px 20px 20px;
+    padding: 8px 20px;
     background-color: #ffffff;
-}
 
-header h1 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 42px;
-    letter-spacing: 4px;
-    font-weight: 600;
-}
-
-header p {
-    margin-top: -4px;
-    font-size: 14px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #9b7d76;
-}
-/* ---------- HEADER ---------- */
-
-header {
-    text-align: center;
-    padding: 12px 20px;
-    background-color: #ffffff;
-    height: 105px;
-    overflow: hidden;
+    height: 112px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    overflow: hidden;
 }
 
 .valdia-logo {
-    width: 145px;
-    height: 90px;
+    width: 155px;
+    height: 100px;
+
     object-fit: cover;
     object-position: center;
+
     display: block;
 }
+
 
 /* ---------- MAIN ---------- */
 
@@ -65,53 +49,8 @@ main {
     margin: 0 auto;
 }
 
-/* ---------- HERO ---------- */
 
-.hero {
-    text-align: center;
-    padding: 65px 20px 45px;
-}
-
-.small-text {
-    font-size: 13px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #a1847c;
-    margin-bottom: 14px;
-}
-
-.hero h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 52px;
-    line-height: 1.1;
-    margin-bottom: 18px;
-    font-weight: 500;
-}
-
-.hero p {
-    max-width: 650px;
-    margin: 0 auto 30px;
-    font-size: 17px;
-    color: #625955;
-}
-
-.hero a {
-    display: inline-block;
-    text-decoration: none;
-    background-color: #b88f83;
-    color: #ffffff;
-    padding: 13px 28px;
-    border-radius: 30px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
-}
-
-.hero a:hover {
-    background-color: #9d776d;
-}
-
-/* ---------- SECCIONES GENERALES ---------- */
+/* ---------- GENERAL SECTIONS ---------- */
 
 section {
     margin-bottom: 45px;
@@ -136,19 +75,93 @@ section p {
     color: #625955;
 }
 
-/* ---------- SECCIONES BLANCAS ---------- */
+
+/* ---------- HERO ---------- */
+
+.hero {
+    text-align: center;
+
+    padding: 55px 20px 20px;
+
+    margin-bottom: 25px;
+}
+
+.small-text {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #a1847c;
+
+    margin-bottom: 14px;
+}
+
+.hero h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 52px;
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+
+    font-weight: 500;
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin: 0 auto 28px;
+
+    font-size: 17px;
+
+    color: #625955;
+}
+
+.hero a {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background-color: #b88f83;
+    color: #ffffff;
+
+    padding: 13px 28px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.hero a:hover {
+    background-color: #9d776d;
+
+    transform: translateY(-2px);
+}
+
+
+/* ---------- GENERAL WHITE SECTIONS ---------- */
 
 main section:not(.hero):not(.products-section) {
     background-color: #ffffff;
+
     padding: 38px;
+
     border-radius: 18px;
 }
 
-/* ---------- PRODUCTOS ---------- */
+
+/* ---------- PRODUCTS SECTION ---------- */
 
 .products-section {
     background: transparent;
-    padding: 20px 0 70px;
+
+    padding: 0 0 50px;
+
+    margin-top: 0;
+    margin-bottom: 45px;
 }
 
 .products-section > .small-text {
@@ -157,19 +170,26 @@ main section:not(.hero):not(.products-section) {
 
 .products-section > h2 {
     text-align: center;
+
     font-size: 40px;
+
+    margin-bottom: 12px;
 }
 
 .section-intro {
     text-align: center;
+
     max-width: 600px;
-    margin: 0 auto 40px;
+
+    margin: 0 auto 34px;
 }
 
-/* ---------- CARRUSEL HORIZONTAL ---------- */
+
+/* ---------- HORIZONTAL PRODUCT CAROUSEL ---------- */
 
 .products-grid {
     display: flex;
+
     gap: 24px;
 
     overflow-x: auto;
@@ -181,6 +201,7 @@ main section:not(.hero):not(.products-section) {
     padding: 10px 5px 30px;
 
     -webkit-overflow-scrolling: touch;
+
     scrollbar-width: none;
 }
 
@@ -188,14 +209,18 @@ main section:not(.hero):not(.products-section) {
     display: none;
 }
 
-/* ---------- TARJETAS DE PRODUCTOS ---------- */
+
+/* ---------- PRODUCT CARD ---------- */
 
 .product-card {
     flex: 0 0 300px;
+
     scroll-snap-align: start;
 
     background-color: #ffffff;
+
     border-radius: 18px;
+
     padding: 25px;
 
     text-align: center;
@@ -210,63 +235,86 @@ main section:not(.hero):not(.products-section) {
 
 .product-card:hover {
     transform: translateY(-5px);
+
     box-shadow: 0 12px 30px rgba(60, 45, 40, 0.08);
 }
 
-/* ---------- IMÁGENES DE PRODUCTOS ---------- */
+
+/* ---------- PRODUCT IMAGE ---------- */
 
 .product-card img {
     width: 100%;
+
     height: 240px;
+
     object-fit: contain;
+
     margin-bottom: 20px;
 }
 
-/* ---------- NOMBRE DEL PRODUCTO ---------- */
+
+/* ---------- PRODUCT NAME ---------- */
 
 .product-card h3 {
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: 23px;
+
     font-weight: 500;
+
     margin-bottom: 10px;
 }
 
-/* ---------- DESCRIPCIÓN ---------- */
+
+/* ---------- PRODUCT DESCRIPTION ---------- */
 
 .product-card > p:not(.price) {
     font-size: 14px;
+
     line-height: 1.6;
+
     color: #6b615d;
+
     margin-bottom: 18px;
 }
 
-/* ---------- PRECIO ---------- */
+
+/* ---------- PRICE ---------- */
 
 .product-card .price {
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: 21px;
+
     font-weight: 600;
+
     color: #302a28;
 
     margin-top: auto;
+
     margin-bottom: 16px;
 }
 
-/* ---------- BOTÓN COMPRAR ---------- */
+
+/* ---------- BUY BUTTON ---------- */
 
 .buy-button {
     display: inline-block;
 
     background-color: #b88f83;
+
     color: #ffffff;
 
     text-decoration: none;
 
     padding: 11px 24px;
+
     border-radius: 30px;
 
     font-size: 13px;
+
     letter-spacing: 1px;
+
     text-transform: uppercase;
 
     transition: 0.3s ease;
@@ -274,42 +322,69 @@ main section:not(.hero):not(.products-section) {
 
 .buy-button:hover {
     background-color: #9d776d;
+
+    transform: translateY(-2px);
 }
 
-/* ---------- ABOUT ---------- */
+
+/* ---------- ABOUT VALDIA ---------- */
 
 main section:nth-last-of-type(2) {
     background-color: #efe3dc;
 }
 
-/* ---------- CONNECT ---------- */
+
+/* ---------- INSTAGRAM / CONNECT ---------- */
 
 main section:last-of-type {
     text-align: center;
 }
 
-main section:last-of-type a {
+.instagram-button {
     display: inline-block;
-    margin-top: 18px;
-    color: #8f6e66;
-    font-weight: 600;
-    text-decoration: none;
+
+    margin-top: 20px;
+
+    background-color: #b88f83;
+
+    color: #ffffff !important;
+
+    padding: 12px 26px;
+
+    border-radius: 30px;
+
+    text-decoration: none !important;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+    transition: 0.3s ease;
 }
 
-main section:last-of-type a:hover {
-    text-decoration: underline;
+.instagram-button:hover {
+    background-color: #9d776d;
+
+    transform: translateY(-2px);
 }
+
 
 /* ---------- FOOTER ---------- */
 
 footer {
     text-align: center;
+
     padding: 28px 20px;
+
     background-color: #ffffff;
+
     color: #8e827d;
+
     font-size: 13px;
+
     margin-top: 40px;
 }
+
 
 /* ---------- TABLET ---------- */
 
@@ -320,6 +395,7 @@ footer {
     }
 }
 
+
 /* ---------- MOBILE ---------- */
 
 @media (max-width: 700px) {
@@ -328,12 +404,22 @@ footer {
         width: 92%;
     }
 
-    header h1 {
-        font-size: 34px;
+    header {
+        height: 95px;
+
+        padding: 6px 15px;
+    }
+
+    .valdia-logo {
+        width: 135px;
+
+        height: 86px;
     }
 
     .hero {
-        padding: 65px 10px;
+        padding: 42px 10px 15px;
+
+        margin-bottom: 20px;
     }
 
     .hero h2 {
@@ -342,6 +428,12 @@ footer {
 
     .hero p {
         font-size: 16px;
+
+        margin-bottom: 24px;
+    }
+
+    section {
+        margin-bottom: 35px;
     }
 
     main section:not(.hero):not(.products-section) {
@@ -353,42 +445,35 @@ footer {
     }
 
     .products-section {
-        padding-bottom: 50px;
+        padding: 0 0 40px;
+
+        margin-bottom: 35px;
     }
 
     .products-section > h2 {
         font-size: 32px;
     }
 
+    .section-intro {
+        margin-bottom: 28px;
+    }
+
     .products-grid {
         gap: 16px;
+
         padding-left: 2px;
+
         padding-right: 2px;
     }
 
     .product-card {
         flex: 0 0 82%;
+
         padding: 22px;
     }
 
     .product-card img {
         height: 220px;
     }
-    .instagram-button {
-    display: inline-block;
-    background-color: #b88f83;
-    color: #ffffff !important;
-    padding: 12px 26px;
-    border-radius: 30px;
-    text-decoration: none !important;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    transition: 0.3s ease;
-}
-
-.instagram-button:hover {
-    background-color: #9d776d;
-    transform: translateY(-2px);
-}
 }
 
